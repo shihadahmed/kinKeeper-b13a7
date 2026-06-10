@@ -10,12 +10,7 @@ function Footer() {
   return (
     <footer className="w-full bg-[#244D3F] text-white/90 ">
       <div className="max-w-[1600px] mx-auto px-6 py-12 md:py-16 flex flex-col items-center">
-        
-        {/* <h2 className="text-4xl md:text-5xl font-bold tracking-wide text-white mb-4 text-center">
-          KeenKeeper
-        </h2> */}
        
-        {/* Logo Image instead of H2 Header */}
         <Link to="/" className="inline-block select-none cursor-pointer mb-6">
           <img 
             src={footerlogoImg} 
