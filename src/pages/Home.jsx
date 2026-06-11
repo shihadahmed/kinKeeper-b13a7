@@ -47,7 +47,7 @@ function Home() {
     return <div className="text-center py-20 font-bold text-[#64748B]">Loading...</div>;
   }
 
-  return (
+ return (
     <section className="w-full bg-[#F8FAFC] py-16 px-6">
       <div className="max-w-[1600px] mx-auto flex flex-col items-center">
         
@@ -55,7 +55,7 @@ function Home() {
           Friends to keep close in your life
         </h2>
 
-        <p className="text-sm md:text-base text-center font-bold text-[#64748B] max-w-2xl mb-8 leading-relaxed">
+        <p className="text-sm md:text-base text-center font-semibold text-[#64748B] max-w-2xl mb-8 leading-relaxed">
           Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
         </p>
 
@@ -88,13 +88,13 @@ function Home() {
         <div className="w-full flex justify-between items-center mb-6">
           <h3 className="text-xl md:text-2xl font-black text-[#1E293B]">Your Friends</h3>
           
-          <div className="flex gap-2">
+          <div className="flex gap-1">
             <button 
               onClick={handlePrev}
               disabled={startIndex === 0}
-              className={`p-2 rounded-lg border border-[#E2E8F0] bg-white text-[#1E293B] transition-colors ${startIndex === 0 ? 'opacity-40 cursor-not-allowed' : 'hover:bg-[#F1F5F9]'}`}
+              className={`w-9 h-9 flex items-center justify-center rounded-l border border-[#E2E8F0] bg-white text-[#64748B] transition-colors ${startIndex === 0 ? 'opacity-30 cursor-not-allowed' : 'hover:bg-[#F8FAFC] active:bg-[#F1F5F9]'}`}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
               </svg>
             </button>
@@ -102,9 +102,9 @@ function Home() {
             <button 
               onClick={handleNext}
               disabled={startIndex + 16 >= friends.length}
-              className={`p-2 rounded-lg border border-[#E2E8F0] bg-white text-[#1E293B] transition-colors ${startIndex + 16 >= friends.length ? 'opacity-40 cursor-not-allowed' : 'hover:bg-[#F1F5F9]'}`}
+              className={`w-9 h-9 flex items-center justify-center rounded-r border-t border-b border-r border-[#E2E8F0] bg-white text-[#64748B] transition-colors ${startIndex + 16 >= friends.length ? 'opacity-30 cursor-not-allowed' : 'hover:bg-[#F8FAFC] active:bg-[#F1F5F9]'}`}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
               </svg>
             </button>
