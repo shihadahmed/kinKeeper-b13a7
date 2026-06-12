@@ -29,13 +29,13 @@ function TimeLine() {
     <div className="w-full min-h-screen bg-[#F8FAFC] py-12 px-6 font-sans">
       <div className="max-w-[800px] mx-auto">
         
-        <h1 className="text-4xl font-black text-[#1E293B] mb-6 tracking-tight">Timeline</h1>
+        <h1 className="text-4xl font-bold text-[#1E293B] mb-6 tracking-tight">Timeline</h1>
 
         <div className="mb-6 relative w-full max-w-[240px]">
           <select 
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            className="w-full bg-white border border-[#E2E8F0] rounded-xl pl-4 pr-10 py-2.5 text-sm font-bold text-[#64748B] shadow-sm focus:outline-none focus:border-[#244D3F] appearance-none cursor-pointer"
+            className="w-full bg-white border border-[#E2E8F0] rounded-xl pl-4 pr-10 py-2.5 text-sm text-[#64748B] shadow-sm focus:outline-none focus:border-[#244D3F] appearance-none cursor-pointer"
           >
             <option value="all">Filter timeline</option>
             <option value="meetup">Meetups</option>
@@ -60,9 +60,9 @@ function TimeLine() {
               
               <div className="flex flex-col">
                 <p className="text-sm font-bold text-[#64748B]">
-                  <span className="text-[#1E293B] font-black">{event.typeText}</span> with {event.person}
+                  <span className="text-[#1E293B]">{event.typeText}</span> with {event.person}
                 </p>
-                <p className="text-xs font-bold text-[#94A3B8] mt-0.5">{event.date}</p>
+                <p className="text-xs font-medium text-[#94A3B8] mt-0.5">{event.date}</p>
               </div>
             </div>
           ))}
