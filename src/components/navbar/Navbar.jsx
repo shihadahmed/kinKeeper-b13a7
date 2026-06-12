@@ -10,7 +10,8 @@ const Navbar = () => {
 
   return (
     <nav className="w-full bg-white border-b border-gray-100">
-      <div className="max-w-[1600px] mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-[1600px] mx-auto px-4 md:px-6 py-4 md:py-0 md:h-20 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
+        
         <Link to="/" className="flex items-center select-none cursor-pointer">
           <img
             src={logoImg}
@@ -19,10 +20,10 @@ const Navbar = () => {
           />
         </Link>
 
-        <div className="flex items-center gap-2 md:gap-4">
+        <div className="flex items-center justify-center gap-1 w-full md:w-auto overflow-x-auto no-scrollbar">
           <Link
             to="/"
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all ${
+            className={`flex items-center justify-center gap-2 px-4 md:px-5 py-2.5 rounded-lg text-sm font-semibold transition-all flex-1 md:flex-none whitespace-nowrap ${
               isActive("/")
                 ? "bg-[#244D3F] text-white shadow-sm"
                 : "text-[#475569] hover:bg-gray-50"
@@ -34,7 +35,7 @@ const Navbar = () => {
 
           <Link
             to="/timeline"
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all ${
+            className={`flex items-center justify-center gap-2 px-4 md:px-5 py-2.5 rounded-lg text-sm font-semibold transition-all flex-1 md:flex-none whitespace-nowrap ${
               isActive("/timeline")
                 ? "bg-[#244D3F] text-white shadow-sm"
                 : "text-[#475569] hover:bg-gray-50"
@@ -46,7 +47,7 @@ const Navbar = () => {
 
           <Link
             to="/stats"
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all ${
+            className={`flex items-center justify-center gap-2 px-4 md:px-5 py-2.5 rounded-lg text-sm font-semibold transition-all flex-1 md:flex-none whitespace-nowrap ${
               isActive("/stats")
                 ? "bg-[#244D3F] text-white shadow-sm"
                 : "text-[#475569] hover:bg-gray-50"
@@ -56,6 +57,7 @@ const Navbar = () => {
             <span>Stats</span>
           </Link>
         </div>
+
       </div>
     </nav>
   );
